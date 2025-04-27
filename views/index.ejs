@@ -1,0 +1,656 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Data -->
+  <title>Plaquity | Web & Digital Marketing for Dentists</title>
+  <meta name="description"
+    content="Plaquity is a specialist dental web agency delivering web and app development, digital marketing, and design solutions tailored for dentists and dental clinics." />
+  <meta name="keywords"
+    content="dental web development, dentist website design, dental app development, dental digital marketing, dental clinic branding, dentist SEO, agency for dentists, dental practice marketing, dental mobile app development, clinic branding for dentists, local dentist web agency, dental social media marketing" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <!-- <link rel="stylesheet" href="/style.css" /> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- swiper js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary: #114F93;
+    }
+    .outline-text-primary {
+      color: white;
+      -webkit-text-stroke: 1px #114f93;
+      opacity: 40%;
+    }
+  </style>
+</head>
+
+
+<body>
+
+
+  <nav class="dark:bg-gray-900  w-full z-20 start-0 border-b bg-primary border-gray-200 dark:border-gray-600">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
+      <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="/logo.png" class="h-8" alt="Flowbite Logo">
+      </a>
+      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <button type="button"
+          class="text-white bg-[#FA8D25] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-md px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <i class="fa-solid fa-phone"></i> 2-955-871-8617</button>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="relative w-full h-[100vw] sm:h-[40vw] bg-no-repeat bg-center bg-cover active"
+    style="background-image: url('/banner.jpg');">
+    <!-- Red Overlay -->
+    <div class="absolute inset-0 bg-[#114F93CC] opacity-50"></div>
+    <!-- Heading Text -->
+    <div class="relative z-50 p-6 max-w-screen-xl mx-auto flex items-center justify-center sm:justify-start h-full">
+      <div class="flex flex-col items-start justify-start w-full space-y-4">
+        <h1 class="text-white text-2xl sm:text-4xl md:text-6xl font-bold sm:w-8/12">Smarter Digital Solutions for Modern
+          Dentists
+        </h1>
+        <p class="text-white text-md sm:text-lg sm:w-8/12">Smarter Digital Solutions for Modern Dentists</p>
+
+        <button type="button"
+          class="text-white flex justify-center items-center space-x-3 bg-[#FA8D25] hover:bg-[#FB8D25]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 me-2 mb-2">
+          <p>Contact Us </p> <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="myModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-xl p-6 w-96 relative">
+      <button id="closeModalBtn"
+        class="absolute top-2 right-3 text-gray-400 text-2xl font-bold hover:text-black">&times;</button>
+      <h2 class="text-2xl font-semibold mb-4 text-center">Enter Your Email</h2>
+
+      <form action="/users/email/email" method="POST" class="space-y-4">
+        <!-- Email Input -->
+        <div class="mb-6">
+          <label for="email" class="block mb-2 font-bold">
+            Your Email<span class="text-red-500">*</span>
+          </label>
+          <input type="email" id="email" name="email"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E4AA0]"
+            placeholder="Email Address" required>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit"
+          class="w-full ml-auto px-8 py-3 bg-[#0C439D] text-white font-medium rounded-xl flex items-center justify-center hover:bg-[#103D8C] transition-colors">
+          Submit
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 16 16 12 12 8"></polyline>
+            <line x1="8" y1="12" x2="16" y2="12"></line>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <section class="max-w-screen-xl mx-auto mt-20 px-4">
+    <div class=" grid grid-cols-1 sm:grid-cols-2 gap-12">
+      <div class="relative">
+        <img src="/image1.jpg" alt="" class="h-80 w-4/5 sm:w-[520px] rounded-xl">
+        <img src="/image2.jpg" alt="" class="h-72 w-[340px] rounded-xl border-4 border-white absolute top-44 right-2">
+        <div
+          class="bg-[#0C439D] text-white rounded-xl text-center w-60 mt-40 sm:mt-4 mx-auto sm:mx-0 sm:mr-5 h-[120px] flex flex-col items-center justify-center">
+          <h3 class="text-4xl font-bold">15K+</h3>
+          <h5 class="text-xl">Successful <br /> Projects</h5>
+        </div>
+      </div>
+      <div class="space-y-5">
+        <h4 class="text-lx sm:text-2xl text-[#114F93] font-medium text-center sm:text-start">Why Choose Plaquity?</h4>
+        <h2 class="text-2xl sm:text-3xl font-bold text-center sm:text-start">Experience the Difference of a
+          Digitally-Savvy Dental
+          Partner</h2>
+        <p class="text-md sm:text-lg">Generic agencies deliver generic results. At Plaquity, we live and breathe
+          dentistry. Combining
+          dental-industry insight with full-stack digital expertise—you get patient-focused websites and marketing that
+          genuinely grow your practice.</p>
+        <ul class="space-y-2">
+          <li class="flex gap-4">
+            <img src="/Tick.svg" alt="">
+            <p class="text-md sm:text-lg">Dental Industry-Specialized Expertise</p>
+          </li>
+          <li class="flex gap-4">
+            <img src="/Tick.svg" alt="">
+            <p class="text-md sm:text-lg">End-to-End Turnkey Digital Service</p>
+          </li>
+          <li class="flex gap-4">
+            <img src="/Tick.svg" alt="">
+            <p class="text-md sm:text-lg">ROI-Driven Marketing</p>
+          </li>
+          <li class="flex gap-4">
+            <img src="/Tick.svg" alt="">
+            <p class="text-md sm:text-lg">Transparent & Collaborative Process</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="max-w-screen-xl mx-auto mt-20 px-4">
+    <h4 class="text-lx sm:text-2xl text-[#114F93] font-medium mb-4 text-center sm:text-start">Services</h4>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-16 text-center sm:text-start">Precision Digital Solutions for Your
+      Dental Practice
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="shadow hover:shadow-xl border-[2px] border-[#0C439D1A] rounded-2xl max-w-[305px] w-full mx-auto p-5">
+        <div class="flex items-center justify-between pb-4">
+          <img src="/sass.svg" alt="" class="w-20 h-20 object-cover">
+          <h3 class="outline-text-primary text-5xl font-bold">01</h3>
+        </div>
+        <div>
+          <h2 class="font-bold text-xl text-[#114F93] mb-4">UI/UX Design</h2>
+          <p class="text-start text-md">Patient-first interfaces that make every interaction intuitive, enjoyable, and
+            efficient.</p>
+        </div>
+      </div>
+      <div class="shadow hover:shadow-xl border-[2px] border-[#0C439D1A] rounded-2xl max-w-[305px] w-full mx-auto p-5">
+        <div class="flex items-center justify-between pb-4">
+          <img src="/Affiliate.svg" alt="" class="w-20 h-20 object-cover">
+          <h3 class="outline-text-primary text-5xl font-bold">02</h3>
+        </div>
+        <div>
+          <h2 class="font-bold text-xl text-[#114F93] mb-4">Web & App Development</h2>
+          <p class="text-start text-md">Responsive, high-performance websites and apps—built to convert visitors into
+            patients.
+          </p>
+        </div>
+      </div>
+      <div class="shadow hover:shadow-xl border-[2px] border-[#0C439D1A] rounded-2xl max-w-[305px] w-full mx-auto p-5">
+        <div class="flex items-center justify-between pb-4">
+          <img src="/Amazon Affiliate.svg" alt="" class="w-20 h-20 object-cover">
+          <h3 class="outline-text-primary text-5xl font-bold">03</h3>
+        </div>
+        <div>
+          <h2 class="font-bold text-xl text-[#114F93] mb-4">Digital Marketing & SEO</h2>
+          <p class="text-start text-md">Targeted campaigns and SEO tactics that drive traffic, engagement, and new
+            bookings.
+          </p>
+        </div>
+      </div>
+      <div class="shadow hover:shadow-xl border-[2px] border-[#0C439D1A] rounded-2xl max-w-[305px] w-full mx-auto p-5">
+        <div class="flex items-center justify-between pb-4">
+          <img src="/Pay per Call.svg" alt="" class="w-20 h-20 object-cover">
+          <h3 class="outline-text-primary text-5xl font-bold">04</h3>
+        </div>
+        <div>
+          <h2 class="font-bold text-xl text-[#114F93] mb-4">Brand Development</h2>
+          <p class="text-start text-md">Distinct dental branding that builds trust, recognition, and long-term loyalty.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="max-w-screen-xl mx-auto mt-20">
+    <div class="py-4">
+      <h2 class="text-lx sm:text-2xl text-[#114F93] font-medium mb-4  text-center sm:text-start">How We Work</h2>
+      <p class="text-2xl sm:text-3xl font-bold mb-16 text-center sm:text-start">4-Step Path to Your Dental Digital
+        Success.</p>
+    </div>
+    <section class="max-w-screen-xl mx-auto hidden md:block py-4">
+      <div class="grid grid-cols-1 sm:grid-cols-7 gap-2 ">
+        <div class=" flex items-center justify-center">
+          <div class="bg-[#FFF4E9] rounded-full p-2 w-20 h-20">
+            <img src="/Group.png" alt="Logo" class=" ">
+          </div>
+        </div>
+        <div class="flex items-center justify-center">
+          <div class="w-full">
+            <img src="/Frame 2087330810.png" alt="Logo" class=" ">
+          </div>
+        </div>
+        <div class=" flex items-center justify-center">
+          <div class="bg-[#FFF4E9] rounded-full p-2 w-20 h-20">
+            <img src="/Group1.png" alt="Logo" class=" ">
+          </div>
+        </div>
+        <div class=" flex items-center justify-center">
+          <div class="w-full">
+            <img src="/Frame 2087330810.png" alt="Logo" class=" ">
+          </div>
+        </div>
+        <div class=" flex items-center justify-center">
+          <div class="bg-[#FFF4E9] rounded-full p-2 w-20 h-20">
+            <img src="/Group2.png" alt="Logo" class=" ">
+          </div>
+        </div>
+        <div class="flex items-center justify-center">
+          <div class="w-full">
+            <img src="/Frame 2087330810.png" alt="Logo" class=" ">
+          </div>
+        </div>
+        <div class=" flex items-center justify-center">
+          <div class="bg-[#FFF4E9] rounded-full p-2 w-20 h-20">
+            <img src="/Group3.png" alt="Logo" class=" ">
+          </div>
+        </div>
+        <!-- text start here -->
+        <div class="py-4 text-center">
+          <h1 class="text-xl font-bold">Connect with Us</h1>
+          <p class="text-md">Fill out the form below or call/message us directly—we’ll schedule a quick chat to
+            understand your practice
+            goals.</p>
+        </div>
+        <div class=></div>
+        <div class="py-4 text-center">
+          <h1 class="text-xl font-bold">Strategy & Planning</h1>
+          <p class="text-md">We audit your current digital footprint, define KPIs, required services, and create a
+            custom roadmap.</p>
+        </div>
+        <div class=></div>
+        <div class="py-4 text-center">
+          <h1 class="text-xl font-bold">Implementation</h1>
+          <p class="text-md">Our specialized teams execute the agreed-upon tasks, provide regular progress updates for
+            review.</p>
+        </div>
+        <div class=></div>
+        <div class="py-4 text-center">
+          <h1 class="text-xl font-bold">Feedback & Optimization</h1>
+          <p class="text-md">After launch, we gather your feedback and monitor real-time metrics to refine where needed.
+          </p>
+        </div>
+        <div class=></div>
+      </div>
+
+
+    </section>
+
+    <section class="max-w-screen-xl md:hidden block px-4 py-4 mx-auto">
+      <div class="grid grid-cols-1  gap-2 ">
+        <div class=" flex flex-col items-center justify-center">
+          <div class="bg-[#FFF4E9] rounded-full p-2 w-20 h-20">
+            <img src="/Group.png" alt="Logo" class=" ">
+          </div>
+          <div class="py-4 text-center">
+            <h1 class="text-xl font-bold">Connect with Us</h1>
+            <p class="text-md">Fill out the form below or call/message us directly—we’ll schedule a quick chat to
+              understand your
+              practice goals.</p>
+          </div>
+        </div>
+        <div class=" flex flex-col items-center justify-center">
+          <div class="bg-[#FFF4E9] rounded-full p-2 w-20 h-20">
+            <img src="/Group1.png" alt="Logo" class=" ">
+          </div>
+          <div class="py-4 text-center">
+            <h1 class="text-xl font-bold">Strategy & Planning</h1>
+            <p class="text-md">We audit your current digital footprint, define KPIs, required services, and create a
+              custom roadmap.</p>
+          </div>
+        </div>
+        <div class=" flex flex-col items-center justify-center">
+          <div class="bg-[#FFF4E9] rounded-full p-2 w-20 h-20">
+            <img src="/Group2.png" alt="Logo" class=" ">
+          </div>
+          <div class="py-4 text-center">
+            <h1 class="text-xl font-bold">Implementation</h1>
+            <p class="text-md">Our specialized teams execute the agreed-upon tasks, provide regular progress updates for
+              review.</p>
+          </div>
+        </div>
+        <div class=" flex flex-col items-center justify-center">
+          <div class="bg-[#FFF4E9] rounded-full p-2 w-20 h-20">
+            <img src="/Group3.png" alt="Logo" class=" ">
+          </div>
+          <div class="py-4 text-center">
+            <h1 class="text-xl font-bold">Feedback & Optimization</h1>
+            <p class="text-md">After launch, we gather your feedback and monitor real-time metrics to refine where
+              needed.</p>
+          </div>
+        </div>
+        <!-- text start here -->
+
+      </div>
+
+
+    </section>
+  </section>
+
+
+  <section>
+    <div class="">
+      <!-- Testimonial Header -->
+      <div class="max-w-screen-xl mx-auto mt-20">
+        <h4 class="text-lx sm:text-2xl text-[#114F93] font-medium mb-4 text-center sm:text-start">Feedback from Our
+          Clients</h4>
+        <h2 class="text-2xl sm:text-3xl font-bold mb-16 text-center sm:text-start">We measure our success by what our
+          clients say.<br class="hidden sm:block" />
+          See their experience firsthand.</h2>
+      </div>
+
+
+      <div class="bg-[#E7ECF580] py-12 px-4 rounded-lg">
+        <div class="max-w-screen-xl mx-auto">
+
+          <!-- Swiper -->
+          <div class="swiper relative rounded-lg my-8">
+            <div class="swiper-wrapper">
+
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-white p-8 rounded-lg shadow-md flex flex-col-reverse sm:grid sm:grid-cols-3 gap-8 h-[650px] sm:h-80">
+                  <div class="sm:col-span-2 flex flex-col-reverse sm:flex-col gap-4">
+                    <div>
+                      <p class="text-gray-700 mb-4 text-md">
+                        Our old website was clunky and outdated. Plaquity gave it a complete makeover—it's now modern,
+                        easy
+                        to use, and looks great on phones too. Patients love it, and we’ve seen way more online bookings
+                        since the update. They really know the dental space!
+                      </p>
+                      <div class="relative bottom-8 opacity-30 hidden sm:block">
+                        <img src="/coma.svg" alt="" class="ml-auto w-10">
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="text-xl font-bold">Dr. Michael Tran</h4>
+                      <p class="text-gray-600 font-medium">DDS</p>
+                    </div>
+                  </div>
+                  <div class="">
+                    <img src="/unsplash_RxiAV5LC2-ww.png" alt="Martin Goutry"
+                      class="w-full sm:w-64 sm:h-48 sm:mt-8  rounded-xl">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-white p-8 rounded-lg shadow-md flex flex-col-reverse sm:grid sm:grid-cols-3 gap-8 h-[650px] sm:h-80">
+                  <div class="sm:col-span-2 flex flex-col-reverse sm:flex-col gap-4">
+                    <div>
+                      <p class="text-gray-700 mb-4 text-md">
+                        We weren’t expecting such a big difference, but the new branding really changed how people see
+                        us. The logo, colours, and website all look clean and professional. Patients actually comment on
+                        how nice everything looks now.
+                      </p>
+                      <div class="relative bottom-8 opacity-30 hidden sm:block">
+                        <img src="/coma.svg" alt="" class="ml-auto w-10">
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="text-xl font-bold">Dr. Robert Lee</h4>
+                      <p class="text-gray-600 font-medium">DMD</p>
+                    </div>
+                  </div>
+                  <div class="">
+                    <img src="/unsplash_RxiAV5LC-ww.png" alt="Martin Goutry"
+                      class="w-full sm:w-64 sm:h-48 sm:mt-8  rounded-xl">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-white p-8 rounded-lg shadow-md flex flex-col-reverse sm:grid sm:grid-cols-3 gap-8 h-[650px] sm:h-80">
+                  <div class="sm:col-span-2 flex flex-col-reverse sm:flex-col gap-4">
+                    <div>
+                      <p class="text-gray-700 mb-4 text-md">
+                        Thanks to Plaquity’s marketing and SEO, we showed up on the first page of Google within a few
+                        months. More local patients are finding us online, and the whole process was super smooth. It
+                        really worked.
+                      </p>
+                      <div class="relative bottom-8 opacity-30 hidden sm:block">
+                        <img src="/coma.svg" alt="" class="ml-auto w-10">
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="text-xl font-bold">Dr. Aisha Khan</h4>
+                      <p class="text-gray-600 font-medium">BDS</p>
+                    </div>
+                  </div>
+                  <div class="">
+                    <img src="/unsplash_RxiAV5LC2-ww.png" alt="Martin Goutry"
+                      class="w-full sm:w-64 sm:h-48 sm:mt-8  rounded-xl">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-white p-8 rounded-lg shadow-md flex flex-col-reverse sm:grid sm:grid-cols-3 gap-8 h-[650px] sm:h-80">
+                  <div class="sm:col-span-2 flex flex-col-reverse sm:flex-col gap-4">
+                    <div>
+                      <p class="text-gray-700 mb-4 text-md">
+                        We had a solid practice, but our online presence was invisible. Plaquity rebuilt our site,
+                        launched targeted ad campaigns, and fine-tuned our brand voice. In just 12 weeks, our
+                        new-patient bookings jumped by 40%, and we’re now the top-ranked dentist in our ZIP code!
+                      </p>
+                      <div class="relative bottom-8 opacity-30 hidden sm:block">
+                        <img src="/coma.svg" alt="" class="ml-auto w-10">
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="text-xl font-bold">Dr. Emily Carter</h4>
+                      <p class="text-gray-600 font-medium">DMD</p>
+                    </div>
+                  </div>
+                  <div class="">
+                    <img src="/unsplash_RxiAV5LC-ww.png" alt="Martin Goutry"
+                      class="w-full sm:w-64 sm:h-48 sm:mt-8  rounded-xl">
+                  </div>
+                </div>
+              </div>
+              <!-- Add more slides -->
+
+            </div>
+
+            <!-- Pagination Dots -->
+
+          </div>
+          <div class="relative -bottom-8">
+            <div class="swiper-pagination w-full"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="max-w-screen-xl mx-auto mt-20">
+    <div class=" bg-white rounded-3xl sm:shadow-lg overflow-hidden">
+      <div class="flex flex-col md:flex-row">
+
+        <!-- Image Section -->
+        <div class="w-full md:w-1/2">
+          <img src="/contact.png" alt="Customer service representative on phone"
+            class="w-full h-full object-cover rounded-xl">
+        </div>
+
+        <!-- Form Section -->
+        <div class="w-full md:w-1/2 p-8 md:p-12">
+          <h1 class="text-4xl font-bold text-[#0C439D] mb-8">Contact Form</h1>
+
+          <form method="post" action="/send-email">
+            <div class="mb-6">
+              <label for="fullName" class="block mb-2">
+                Full Name<span class="text-red-500">*</span>
+              </label>
+              <input type="text" id="fullName" name="name"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E4AA0]"
+                placeholder="Enter your full name" required>
+            </div>
+
+            <div class="mb-6">
+              <label for="email" class="block mb-2">
+                Your Email<span class="text-red-500">*</span>
+              </label>
+              <input type="email" id="email" name="email"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E4AA0]"
+                placeholder="Enter your Email" required>
+            </div>
+
+            <div class="mb-6">
+              <label for="whatsapp" class="block mb-2">
+                WhatsApp Number<span class="text-red-500">*</span>
+              </label>
+              <input type="tel" id="whatsapp" name="number"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E4AA0]"
+                placeholder="Enter your Number" required>
+            </div>
+
+            <div class="mb-8">
+              <label for="message" class="block mb-2">
+                Message
+              </label>
+              <textarea id="message" rows="5" name="message"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E4AA0]"
+                placeholder="Type Message ......"></textarea>
+            </div>
+
+            <button type="submit"
+              class="w-full md:w-auto ml-auto px-8 py-3 bg-[#0C439D] text-white font-medium rounded-xl flex items-center justify-center hover:bg-[#103D8C] transition-colors">
+              Submit
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 16 16 12 12 8"></polyline>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <footer class=" mt-20 bg-[#114F93] text-white py-8">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <!-- Top section with logo and phone -->
+      <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-8">
+        <!-- Logo -->
+        <div class="flex items-center mb-4 md:mb-0">
+          <img src="/logo.svg" alt="" class=" w-32">
+        </div>
+
+        <!-- Phone number -->
+        <div class="flex items-center gap-4">
+          <img src="/phon.svg" alt="" class="h-10 w-10">
+          <div>
+            <p class="text-md">Call Any Time</p>
+            <p class="text-xl font-bold">2-955-871-8617</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <hr class="border-gray-400 mb-6">
+
+      <!-- Bottom section with copyright and social icons -->
+      <div class="flex flex-col-reverse  md:flex-row justify-between md:items-center gap-8 sm:gap-4">
+        <!-- Copyright and links -->
+        <div class="flex flex-col-reverse sm:flex-row gap-4 sm:gap-12 sm:items-center mb-4 md:mb-0">
+          <div class="flex items-center gap-4 mr-6 mb-2 md:mb-0">
+            <img src="/copy.svg" alt="" class="h-5 w-5">
+            <span>Copyright</span>
+          </div>
+          <div class="flex gap-6">
+            <a href="#" class="mr-6 hover:underline mb-2 md:mb-0">Privacy Policy</a>
+            <a href="#" class="hover:underline">Terms & Conditions</a>
+          </div>
+
+        </div>
+
+        <!-- Social icons -->
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-gray-300">
+            <i class="fab fa-facebook-f text-xl"></i>
+          </a>
+          <a href="#" class="hover:text-gray-300">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+          <a href="#" class="hover:text-gray-300">
+            <i class="fab fa-pinterest-p text-xl"></i>
+          </a>
+          <a href="#" class="hover:text-gray-300">
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const modal = document.getElementById('myModal');
+    const closeBtn = document.getElementById('closeModalBtn');
+
+    // Function to open modal
+    const openModal = () => {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    // Function to close modal
+    const closeModal = () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+
+    // Close when X button clicked
+    closeBtn.onclick = closeModal;
+
+    // Close when clicking outside modal content
+    window.onclick = (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+
+    // Auto-open modal every 10 seconds (10000 ms)
+    setInterval(openModal, 30000);
+
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      spaceBetween: 24,
+      slidesPerView: 1,  // default on mobile
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      speed: 800,
+      breakpoints: {
+        768: {
+          slidesPerView: 2  // show 2 cards at ≥768px screen width
+        }
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>
