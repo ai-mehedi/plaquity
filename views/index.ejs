@@ -74,20 +74,47 @@
 
   <!-- Modal Structure -->
   <div id="myModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
-    <div class="bg-white rounded-xl p-6 w-96 relative">
+    <div class="bg-white rounded-xl p-6 sm:w-4/12 w-full relative">
       <button id="closeModalBtn"
         class="absolute top-2 right-3 text-gray-400 text-2xl font-bold hover:text-black">&times;</button>
-      <h2 class="text-2xl font-semibold mb-4 text-center">Enter Your Email</h2>
+      <h2 class="text-2xl font-semibold mb-4 text-center">Drop Us a Line</h2>
 
-      <form action="/users/email/email" method="POST" class="space-y-4">
+      <form action="/send-email" method="POST" class="space-y-4">
         <!-- Email Input -->
         <div class="mb-6">
-          <label for="email" class="block mb-2 font-bold">
+          <label for="fullName" class="block mb-2">
+            Full Name<span class="text-red-500">*</span>
+          </label>
+          <input type="text" id="fullName" name="name"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E4AA0]"
+            placeholder="Enter your full name" required>
+        </div>
+
+        <div class="mb-6">
+          <label for="email" class="block mb-2">
             Your Email<span class="text-red-500">*</span>
           </label>
           <input type="email" id="email" name="email"
             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E4AA0]"
-            placeholder="Email Address" required>
+            placeholder="Enter your Email" required>
+        </div>
+
+        <div class="mb-6">
+          <label for="whatsapp" class="block mb-2">
+            WhatsApp Number<span class="text-red-500">*</span>
+          </label>
+          <input type="tel" id="whatsapp" name="number"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E4AA0]"
+            placeholder="Enter your Number" required>
+        </div>
+
+        <div class="mb-8">
+          <label for="message" class="block mb-2">
+            Message
+          </label>
+          <textarea id="message" rows="5" name="message"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E4AA0]"
+            placeholder="Type Message ......"></textarea>
         </div>
 
         <!-- Submit Button -->
@@ -603,37 +630,42 @@
   <script>
     const modal = document.getElementById('myModal');
     const closeBtn = document.getElementById('closeModalBtn');
-
+  
     // Function to open modal
     const openModal = () => {
       modal.classList.remove('hidden');
       modal.classList.add('flex');
     }
-
+  
     // Function to close modal
     const closeModal = () => {
       modal.classList.add('hidden');
       modal.classList.remove('flex');
     }
-
-
+  
     // Close when X button clicked
     closeBtn.onclick = closeModal;
-
+  
     // Close when clicking outside modal content
     window.onclick = (event) => {
       if (event.target === modal) {
         closeModal();
       }
     }
-
-    // Auto-open modal every 10 seconds (10000 ms)
-    setInterval(openModal, 30000);
-
+  
+    // Show modal after 30 seconds ONLY if not already shown
+    if (!localStorage.getItem('modalShown')) {
+      setTimeout(() => {
+        openModal();
+        localStorage.setItem('modalShown', 'true'); // Mark as shown
+      }, 10000);
+    }
+  
+    // Swiper setup
     const swiper = new Swiper('.swiper', {
       loop: true,
       spaceBetween: 24,
-      slidesPerView: 1,  // default on mobile
+      slidesPerView: 1,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -645,12 +677,12 @@
       speed: 800,
       breakpoints: {
         768: {
-          slidesPerView: 2  // show 2 cards at ≥768px screen width
+          slidesPerView: 2
         }
       }
     });
-
   </script>
+  
 
 </body>
 

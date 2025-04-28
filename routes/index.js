@@ -15,9 +15,8 @@ router.get('/thankyou', function (req, res, next) {
 router.post("/email", async (req, res) => {
   try {
     // Send the email
-    console.log(req.body)
     await EmailModel.create(req.body);
-    return res.redirect("/");
+    return res.redirect("/thankyou");
   } catch (error) {
     console.error("Error sending email:", error);
     res
